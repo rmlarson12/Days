@@ -1,10 +1,8 @@
 ﻿using System;
 namespace Days
 {
-	public class MyClass
+	public static class MyClass
 	{
-		public MyClass()
-		{
-		}
+
 	}
 }

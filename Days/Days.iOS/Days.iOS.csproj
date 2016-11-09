@@ -113,5 +113,14 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Days\Days.csproj">
+      <Project>{D1DEDC5D-6DA5-4152-BD31-4285F230B9F5}</Project>
+      <Name>Days</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DayCard.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
