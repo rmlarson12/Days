@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\DayCard.png" />
+    <BundleResource Include="Resources\Today" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

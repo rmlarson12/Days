@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RLw-jP-7X5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Today-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -21,60 +22,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today Is:" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                                <rect key="frame" x="16" y="54" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On this Day in History..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCz-2n-kbv">
+                                <rect key="frame" x="16" y="114" width="343" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" fixedFrame="YES" text="9 November 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="6">
-                                <rect key="frame" x="16" y="122" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodaysDate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-AO-rgS">
+                                <rect key="frame" x="16" y="166" width="343" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-Vl-S97">
+                                <rect key="frame" x="16" y="195" width="343" height="30"/>
+                                <state key="normal" title="Change Date"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-mh-z7h">
+                                <rect key="frame" x="16" y="275" width="343" height="349"/>
+                                <connections>
+                                    <segue destination="ZJp-Sj-I5N" kind="embed" id="4fj-fg-QTH"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zii-ke-l5P">
+                                <rect key="frame" x="168" y="578" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardYear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-AW-6dL">
+                                <rect key="frame" x="16" y="300" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2Xl-3c-2qQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On this day in history..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                                <rect key="frame" x="16" y="160" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXH-on-T3h">
+                                <rect key="frame" x="147" y="331" width="82" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DayCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                                <rect key="frame" x="16" y="243" width="343" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3"/>
-                                <exclude reference="6"/>
-                                <exclude reference="7"/>
-                                <exclude reference="8"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="3"/>
-                                <include reference="6"/>
-                                <include reference="7"/>
-                                <include reference="8"/>
-                            </mask>
-                        </variation>
+                        <constraints>
+                            <constraint firstItem="ns8-AO-rgS" firstAttribute="leading" secondItem="SCz-2n-kbv" secondAttribute="leading" id="2YR-Cz-LNq"/>
+                            <constraint firstItem="tFX-Vl-S97" firstAttribute="trailing" secondItem="ns8-AO-rgS" secondAttribute="trailing" id="3Fd-QT-VoG"/>
+                            <constraint firstItem="IkI-AW-6dL" firstAttribute="top" secondItem="tFX-Vl-S97" secondAttribute="bottom" constant="75" id="3Hn-bW-asT"/>
+                            <constraint firstItem="SCz-2n-kbv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7zZ-Mk-zEP"/>
+                            <constraint firstItem="ns8-AO-rgS" firstAttribute="trailing" secondItem="SCz-2n-kbv" secondAttribute="trailing" id="9Ih-ZV-77f"/>
+                            <constraint firstItem="jSf-mh-z7h" firstAttribute="top" secondItem="tFX-Vl-S97" secondAttribute="bottom" constant="50" id="Bxb-Cq-cxC"/>
+                            <constraint firstItem="tFX-Vl-S97" firstAttribute="leading" secondItem="ns8-AO-rgS" secondAttribute="leading" id="ItC-93-tb6"/>
+                            <constraint firstItem="IkI-AW-6dL" firstAttribute="centerX" secondItem="zii-ke-l5P" secondAttribute="centerX" id="NUd-kD-VXy"/>
+                            <constraint firstItem="SCz-2n-kbv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="QQx-l7-De5"/>
+                            <constraint firstItem="IkI-AW-6dL" firstAttribute="leading" secondItem="tFX-Vl-S97" secondAttribute="leading" id="SBY-MA-g34"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jSf-mh-z7h" secondAttribute="bottom" constant="43" id="TeB-b0-bme"/>
+                            <constraint firstItem="jSf-mh-z7h" firstAttribute="leading" secondItem="tFX-Vl-S97" secondAttribute="leading" id="XqO-ql-7WC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zii-ke-l5P" secondAttribute="bottom" constant="52" id="b01-Ab-UQA"/>
+                            <constraint firstItem="ns8-AO-rgS" firstAttribute="top" secondItem="SCz-2n-kbv" secondAttribute="bottom" constant="25" id="fdp-e4-4y9"/>
+                            <constraint firstItem="IXH-on-T3h" firstAttribute="top" secondItem="IkI-AW-6dL" secondAttribute="bottom" constant="10" id="jdD-OD-11W"/>
+                            <constraint firstItem="tFX-Vl-S97" firstAttribute="top" secondItem="ns8-AO-rgS" secondAttribute="bottom" constant="5" id="saD-24-LDk"/>
+                            <constraint firstItem="IkI-AW-6dL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulg-dg-SXW"/>
+                            <constraint firstItem="SCz-2n-kbv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wTQ-jg-SWX"/>
+                            <constraint firstItem="IXH-on-T3h" firstAttribute="centerX" secondItem="IkI-AW-6dL" secondAttribute="centerX" id="x84-vH-m8r"/>
+                            <constraint firstItem="jSf-mh-z7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAS-n1-B6I"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="TodaysDate" destination="6" id="name-outlet-6"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Today" id="bSe-Cb-2th"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="938.39999999999998" y="-0.44977511244377816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x9S-HW-1OL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLw-jP-7X5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QeC-Wc-4K0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WSF-A4-4nb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBv-Za-Pma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="GeY-4p-uoe">
+            <objects>
+                <viewController id="oad-v2-Ila" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T2j-UQ-5gZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="x8J-2T-sO5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p3K-C3-YEO">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="349"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mfL-uM-Yh5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RvW-wK-2sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909.5999999999999" y="585.1574212893554"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="188-Js-0Or">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZJp-Sj-I5N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdT-6p-qew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oad-v2-Ila" kind="relationship" relationship="rootViewController" id="S31-OF-6ax"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sj-g5-bGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="585.1574212893554"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="DayCard.png" width="335" height="358"/>
-    </resources>
 </document>
