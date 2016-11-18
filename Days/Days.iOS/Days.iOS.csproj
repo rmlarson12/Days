@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="View Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -108,9 +109,21 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="View Controllers\AddCardView.cs" />
+    <Compile Include="View Controllers\AddCardView.designer.cs">
+      <DependentUpon>AddCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\CardView.cs" />
+    <Compile Include="View Controllers\CardView.designer.cs">
+      <DependentUpon>CardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\DayViewController.cs" />
+    <Compile Include="View Controllers\DayViewController.designer.cs">
+      <DependentUpon>DayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\CardPageViewController.cs" />
+    <Compile Include="View Controllers\CardPageViewController.designer.cs">
+      <DependentUpon>CardPageViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
