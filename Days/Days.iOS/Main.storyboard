@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="938.39999999999998" y="-0.44977511244377816"/>
         </scene>
-        <!--Add Card View-->
+        <!--Add Card View Controller-->
         <scene sceneID="Cav-EI-W1b">
             <objects>
-                <viewController storyboardIdentifier="AddCardView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oqs-LB-0HR" customClass="AddCardView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oqs-LB-0HR" customClass="AddCardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Co-Rl-qyS"/>
                         <viewControllerLayoutGuide type="bottom" id="ppM-pe-jl2"/>
@@ -135,18 +135,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe the event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQ5-FZ-TY3">
-                                <rect key="frame" x="32" y="404" width="311" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LlA-HI-ADz">
                                 <rect key="frame" x="23" y="116" width="320" height="194"/>
                                 <date key="date" timeIntervalSinceReferenceDate="501176425.85209203">
                                     <!--2016-11-18 15:40:25 +0000-->
                                 </date>
                             </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T5I-BY-j5J">
+                                <rect key="frame" x="32" y="404" width="311" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -164,16 +166,13 @@
                             <constraint firstItem="dfn-W9-CyO" firstAttribute="centerX" secondItem="Wzp-QY-TY6" secondAttribute="centerX" id="Wcc-NJ-bTj"/>
                             <constraint firstAttribute="bottom" secondItem="OnA-RU-YOL" secondAttribute="bottom" constant="288" id="XeQ-He-Kt5"/>
                             <constraint firstItem="dfn-W9-CyO" firstAttribute="top" secondItem="ff8-DO-4sg" secondAttribute="bottom" constant="43" id="cJx-zn-dii"/>
-                            <constraint firstItem="dfn-W9-CyO" firstAttribute="trailing" secondItem="yQ5-FZ-TY3" secondAttribute="trailing" id="eKv-N4-JeZ"/>
                             <constraint firstItem="dfn-W9-CyO" firstAttribute="baseline" secondItem="Qmz-hl-Igj" secondAttribute="firstBaseline" id="fUT-3s-OJd"/>
-                            <constraint firstItem="dfn-W9-CyO" firstAttribute="leading" secondItem="yQ5-FZ-TY3" secondAttribute="leading" id="rcS-RP-Y6Y"/>
-                            <constraint firstItem="yQ5-FZ-TY3" firstAttribute="top" secondItem="OnA-RU-YOL" secondAttribute="bottom" constant="25" id="tQN-Oo-FM3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionTextField" destination="yQ5-FZ-TY3" id="wbf-s1-a52"/>
-                        <outlet property="eventDatePicker" destination="LlA-HI-ADz" id="5t1-4P-s6Z"/>
-                        <outlet property="titleTextField" destination="OnA-RU-YOL" id="aYg-b5-vMy"/>
+                        <outlet property="datePicker" destination="LlA-HI-ADz" id="U2H-CG-SOD"/>
+                        <outlet property="descriptionTextView" destination="T5I-BY-j5J" id="j0s-aZ-NcT"/>
+                        <outlet property="titleTextField" destination="OnA-RU-YOL" id="1pn-bn-1k3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcG-HK-XU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="1859" y="-1"/>
         </scene>
-        <!--Card View-->
+        <!--Card View Controller-->
         <scene sceneID="OrM-sr-ITL">
             <objects>
-                <viewController storyboardIdentifier="CardView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SIZ-KP-53g" customClass="CardView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SIZ-KP-53g" customClass="CardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YSY-oH-tG5"/>
                         <viewControllerLayoutGuide type="bottom" id="vR4-4o-x6t"/>
@@ -238,11 +237,6 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="350" height="350"/>
-                    <connections>
-                        <outlet property="descriptionTextView" destination="Ose-yW-z1e" id="Bu2-hD-Wk6"/>
-                        <outlet property="titleLabel" destination="I1k-58-QEQ" id="CmN-Q4-yEr"/>
-                        <outlet property="yearLabel" destination="bxp-LK-u8Q" id="GSj-Zu-mkv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB4-Fz-eKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

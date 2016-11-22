@@ -109,14 +109,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="View Controllers\AddCardView.cs" />
-    <Compile Include="View Controllers\AddCardView.designer.cs">
-      <DependentUpon>AddCardView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View Controllers\CardView.cs" />
-    <Compile Include="View Controllers\CardView.designer.cs">
-      <DependentUpon>CardView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View Controllers\DayViewController.cs" />
     <Compile Include="View Controllers\DayViewController.designer.cs">
       <DependentUpon>DayViewController.cs</DependentUpon>
@@ -124,6 +116,14 @@
     <Compile Include="View Controllers\CardPageViewController.cs" />
     <Compile Include="View Controllers\CardPageViewController.designer.cs">
       <DependentUpon>CardPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\AddCardViewController.cs" />
+    <Compile Include="View Controllers\AddCardViewController.designer.cs">
+      <DependentUpon>AddCardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\CardViewController.cs" />
+    <Compile Include="View Controllers\CardViewController.designer.cs">
+      <DependentUpon>CardViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

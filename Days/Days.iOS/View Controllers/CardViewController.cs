@@ -7,11 +7,10 @@ using UIKit;
 
 namespace Days.iOS
 {
-	public partial class AddCardView : UIViewController
+	public partial class CardViewController : UIViewController
 	{
-		public AddCardView(IntPtr handle) : base(handle)
+		public CardViewController (IntPtr handle) : base (handle)
 		{
-
 		}
 	}
 }
