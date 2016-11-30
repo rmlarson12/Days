@@ -7,10 +7,67 @@ using UIKit;
 
 namespace Days.iOS
 {
-	public partial class CardPageViewController : UIPageViewController
+	public partial class CardPageViewController : UIPageViewController, IUIPageViewControllerDataSource
 	{
-		public CardPageViewController (IntPtr handle) : base (handle)
+		public CardPageViewController(IntPtr handle) : base(handle)
 		{
+		}
+
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+
+			DataSource = this;
+
+			var controller = Storyboard.InstantiateViewController("CardViewController") as UIViewController;
+
+			SetViewControllers(new UIViewController[] { controller }, UIPageViewControllerNavigationDirection.Forward, false, null);
+		}
+
+
+		UIViewController IUIPageViewControllerDataSource.GetNextViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
+		{
+			var cardController = referenceViewController as CardViewController;
+
+			var card = cardController.DisplayedCard;
+
+			var nextCard = CardManager.GetNextCard(card);
+
+			if (nextCard == null)
+			{
+				return null;
+			}
+			else
+			{
+				var controller = Storyboard.InstantiateViewController("CardViewController") as CardViewController;
+
+				controller.DisplayedCard = nextCard;
+
+				return controller;
+			}
+		}
+
+
+		UIViewController IUIPageViewControllerDataSource.GetPreviousViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
+		{
+			var cardController = referenceViewController as CardViewController;
+
+			var card = cardController.DisplayedCard;
+
+			var previousCard = CardManager.GetPreviousCard(card);
+
+			if (previousCard == null)
+			{
+				return null;
+			}
+			else
+			{
+				var controller = Storyboard.InstantiateViewController("CardViewController") as CardViewController;
+
+				controller.DisplayedCard = previousCard;
+
+				return controller;
+			}
 		}
 	}
 }

@@ -9,8 +9,51 @@ namespace Days.iOS
 {
 	public partial class DayViewController : UIViewController
 	{
-		public DayViewController(IntPtr handle) : base(handle)
+		public DayViewController(IntPtr handle) : base(handle) { }
+
+		public override void ViewDidLoad()
 		{
+			base.ViewDidLoad();
+
+			System.Diagnostics.Debug.WriteLine("ViewDidLoad");
 		}
+
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+
+			currentDateButton.SetTitle(CardManager.CurrentCard.Date.ToShortDateString(), UIControlState.Normal);
+
+			System.Diagnostics.Debug.WriteLine("ViewWillAppear");
+		}
+
+		public override void ViewDidAppear(bool animated)
+		{
+			base.ViewDidAppear(animated);
+
+			System.Diagnostics.Debug.WriteLine("ViewDidAppear");
+		}
+
+		public override void ViewWillDisappear(bool animated)
+		{
+			base.ViewWillDisappear(animated);
+
+			System.Diagnostics.Debug.WriteLine("ViewWillDisappear");
+		}
+
+		public override void ViewDidDisappear(bool animated)
+		{
+			base.ViewDidDisappear(animated);
+
+			System.Diagnostics.Debug.WriteLine("ViewDidDisappear");
+		}
+
+
+		partial void currentDateButtonClicked(NSObject sender)
+		{
+			System.Diagnostics.Debug.WriteLine("Clicked!");
+		}
+
+
 	}
 }

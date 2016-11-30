@@ -9,7 +9,9 @@ namespace Days.iOS
 {
 	public partial class CardViewController : UIViewController
 	{
-		public CardViewController (IntPtr handle) : base (handle)
+		public Card DisplayedCard { get; set; }
+
+		public CardViewController(IntPtr handle) : base(handle)
 		{
 		}
 	}

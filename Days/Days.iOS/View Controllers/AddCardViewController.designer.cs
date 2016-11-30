@@ -9,7 +9,7 @@ using System.CodeDom.Compiler;
 
 namespace Days.iOS
 {
-	[Register("AddCardViewController")]
+	[Register ("AddCardViewController")]
 	partial class AddCardViewController
 	{
 		[Outlet]
@@ -20,25 +20,22 @@ namespace Days.iOS
 
 		[Outlet]
 		UIKit.UITextField titleTextField { get; set; }
-
-		void ReleaseDesignerOutlets()
+		
+		void ReleaseDesignerOutlets ()
 		{
-			if (datePicker != null)
-			{
-				datePicker.Dispose();
+			if (datePicker != null) {
+				datePicker.Dispose ();
 				datePicker = null;
 			}
 
-			if (titleTextField != null)
-			{
-				titleTextField.Dispose();
-				titleTextField = null;
+			if (descriptionTextView != null) {
+				descriptionTextView.Dispose ();
+				descriptionTextView = null;
 			}
 
-			if (descriptionTextView != null)
-			{
-				descriptionTextView.Dispose();
-				descriptionTextView = null;
+			if (titleTextField != null) {
+				titleTextField.Dispose ();
+				titleTextField = null;
 			}
 		}
 	}

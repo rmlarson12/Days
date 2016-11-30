@@ -9,14 +9,22 @@ using System.CodeDom.Compiler;
 
 namespace Days.iOS
 {
-	[Register ("DayViewController")]
+	[Register("DayViewController")]
 	partial class DayViewController
 	{
-		[Action ("changeDateButton:")]
-		partial void changeDateButton (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
+		[Outlet]
+		UIKit.UIButton currentDateButton { get; set; }
+
+		[Action("currentDateButtonClicked:")]
+		partial void currentDateButtonClicked(Foundation.NSObject sender);
+
+		void ReleaseDesignerOutlets()
 		{
+			if (currentDateButton != null)
+			{
+				currentDateButton.Dispose();
+				currentDateButton = null;
+			}
 		}
 	}
 }
